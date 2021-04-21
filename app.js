@@ -6,28 +6,21 @@
 //     return result
 // }
 
-const sum = (a,b) => {
+const add = (a,b) => {
     //BUG (using - instead of +)
-    const result = a + b
-    return result
+    return (a+b)
 }
 
 const subtract = (a,b) => {
-    //BUG (using - instead of +)
-    const result = a - b
-    return result
+    return (a-b)
 }
 
 const multiply = (a,b) => {
-    //BUG (using - instead of +)
-    const result = a * b
-    return result
+    return (a*b)
 }
 
 const divide = (a,b) => {
-    //BUG (using - instead of +)
-    const result = a / b
-    return result
+    return (a/b)
 }
 
 //manual testing
@@ -36,5 +29,7 @@ const divide = (a,b) => {
 
 
 //export the sum function so other files can access it
-module.exports = sum, subtract, multiply, divide
-
+module.exports.add = add;
+module.exports.subtract = subtract;
+module.exports.multiply = multiply;
+module.exports.divide = divide;

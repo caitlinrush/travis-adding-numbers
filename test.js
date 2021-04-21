@@ -5,7 +5,8 @@
 //it needs access to the sum function
 //get it from the app.js file
 //import the function from app.js
-const sum = require("./app")
+const {add, multiply, divide, subtract} = require("./app")
+
 
 
 
@@ -17,36 +18,24 @@ describe("Adding two numbers", () => {
         //jest - i expect the sum of 10 and 5 to be ____
         //expect and tobe also come from jest
         //sum(..) is from app.js
-        expect(sum(10,5)).toBe(15)
+        expect(add(10,5)).toBe(15)
     })
 })
 
-// describe("Subtracting two numbers", () => {
-//     //jest
-//     it("Should return the sum", () => {
-//         //jest - i expect the sum of 10 and 5 to be ____
-//         //expect and tobe also come from jest
-//         //sum(..) is from app.js
-//         expect(subtract(10,5)).toBe(5)
-//     })
-// })
+describe("Subtracting two numbers", () => {
+    it("Should retrun the difference", () => {
+        expect(subtract(10,5)).toBe(5)
+    })
+})
 
-// describe("Multiplying two numbers", () => {
-//     //jest
-//     it("Should return the sum", () => {
-//         //jest - i expect the sum of 10 and 5 to be ____
-//         //expect and tobe also come from jest
-//         //sum(..) is from app.js
-//         expect(sum(10,5)).toBe(50)
-//     })
-// })
+describe("Multiplying two numbers", () => {
+    it("Should return the product", () => {
+        expect(multiply(10,5)).toBe(50)
+    })
+})
 
-// describe("Dividing two numbers", () => {
-//     //jest
-//     it("Should return the sum", () => {
-//         //jest - i expect the sum of 10 and 5 to be ____
-//         //expect and tobe also come from jest
-//         //sum(..) is from app.js
-//         expect(sum(10,5)).toBe(2)
-//     })
-// })
+describe("Diving two numbers", () => {
+    it("Should return the quotient", () => {
+        expect(divide(10,5)).toBe(2)
+    })
+})
